@@ -15,3 +15,5 @@ new Vue({
   vuetify,
   template: '<App/>'
 })
+
+// src/main.js
