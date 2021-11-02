@@ -1,3 +1,4 @@
+
 <template>
   <v-container fluid>
     <AddRaceDialog v-model="AddRaceDialog"></AddRaceDialog>
@@ -42,32 +43,26 @@
 </template>
 
 <script>
-// eslint-disable-next-line
+/* eslint-disable */
+
 import navbar from "@/components/layout/navbar.vue";
-// eslint-disable-next-line
 import AppFooter from "@/components/layout/AppFooter.vue";
-// eslint-disable-next-line
 import AddRaceDialog from "@/components/AddRaceDialog.vue";
 
 export default {
   components: {
     navbar,
     AppFooter,
-    // eslint-disable-next-line
     AddRaceDialog,
   },
-  // eslint-disable-next-line
+
   data() {
     return {
       AddRaceDialog: false,
       drawer: false,
-      // eslint-disable-next-line
-      items: ["9", "10", "11", "12", "13"],
-      // eslint-disable-next-line
+      // items: ["9", "10", "11", "12", "13"]
     };
-    // eslint-disable-next-line
   },
-  // eslint-disable-next-line
 };
 </script>
 

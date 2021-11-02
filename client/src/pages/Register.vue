@@ -16,9 +16,10 @@
                         <!-- <h4 class="text-center">Enter Email</h4> -->
                         <v-form>
                           <v-text-field
-                            label="User"
-                            name="User"
-                            type="text"
+                            label="user"
+                            name="user"
+                            type="user"
+                            v-model="user"
                             color="teal darken-1"
                           />
                           <v-text-field
@@ -26,6 +27,7 @@
                             label="Password"
                             name="password"
                             type="password"
+                            v-model="password"
                             color="teal darken-1"
                           />
                         </v-form>
@@ -116,57 +118,38 @@
 </template>
 
 <script>
-// eslint-disable-next-line
+/* eslint-disable */
 import SignUpDialog from "@/components/SignUpDialog.vue";
-// eslint-disable-next-line
+
 export default {
-  // eslint-disable-next-line
   data() {
     return {
       step: 1,
       sample: {
-        // eslint-disable-next-line
         colors: ["#E0F2F1", "#80CBC4", "#26A69A", "#00796B", "#009688"],
-        // eslint-disable-next-line
         interval: 3000,
         transition: {
-          // eslint-disable-next-line
           duration: 6000,
-          // eslint-disable-next-line
         },
-        // eslint-disable-next-line
       },
-      // eslint-disable-next-line
     };
   },
-  // eslint-disable-next-line
   components: {
-    // eslint-disable-next-line
     SignUpDialog,
   },
-  // eslint-disable-next-line
   computer: {
     showDialog: {
-      // eslint-disable-next-line
       get() {
-        // eslint-disable-next-line
         return this.value;
       },
-      // eslint-disable-next-line
       set(value) {
-        // eslint-disable-next-line
         return this.$emit("input", value);
-        // eslint-disable-next-line
       },
-      // eslint-disable-next-line
     },
   },
   props: {
-    // eslint-disable-next-line
     source: String,
-    // eslint-disable-next-line
   },
-  // eslint-disable-next-line
 };
 </script>
 

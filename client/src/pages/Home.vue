@@ -82,40 +82,29 @@
 </template>
 
 <script>
-// eslint-disable-next-line
+/* eslint-disable */
 import navbar from "@/components/layout/navbar.vue";
-// eslint-disable-next-line
 import AppFooter from "@/components/layout/AppFooter.vue";
 // import AddRacerDialog from "@/components/AddRacerDialog.vue";
 
 export default {
   components: {
     navbar,
-    // eslint-disable-next-line
     AppFooter,
     // AddRacerDialog,
   },
-  // eslint-disable-next-line
   data() {
     return {
       drawer: false,
       showDialog: false,
       numberRule: (v) => {
-        // eslint-disable-next-line
         if (!v.trim()) return true;
-        // eslint-disable-next-line
         if (!isNaN(parseFloat(v)) && v >= 0 && v <= 100) return true;
-        // eslint-disable-next-line
         return "Number has to be between 0 and 100";
-        // eslint-disable-next-line
       },
-      // eslint-disable-next-line
       items: ["9", "10", "11", "12", "13"],
-      // eslint-disable-next-line
     };
-    // eslint-disable-next-line
   },
-  // eslint-disable-next-line
 };
 </script>
 

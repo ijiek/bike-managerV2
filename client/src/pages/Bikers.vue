@@ -128,43 +128,31 @@
 </template>
 
 <script>
-// eslint-disable-next-line
+/* eslint-disable */
 import navbar from "@/components/layout/navbar.vue";
-// eslint-disable-next-line
 import AppFooter from "@/components/layout/AppFooter.vue";
 
-// eslint-disable-next-line
 export default {
-  // eslint-disable-next-line
   Title: "Bikers",
   components: {
     navbar,
-    // eslint-disable-next-line
     AppFooter,
   },
-  // eslint-disable-next-line
+
   data() {
     return {
       bikerView: null,
       drawer: false,
       showDialog: false,
       numberRule: (v) => {
-        // eslint-disable-next-line
         if (!v.trim()) return true;
-        // eslint-disable-next-line
         if (!isNaN(parseFloat(v)) && v >= 10 && v <= 100) return true;
-        // eslint-disable-next-line
         return "Number has to be between 10 and 100";
       },
-      // eslint-disable-next-line
       items: ["9", "10", "11", "12", "13"],
-      // eslint-disable-next-line
       biker: ["View All Bikers", "Year Group", "A-Z"],
-      // eslint-disable-next-line
     };
-    // eslint-disable-next-line
   },
-  // eslint-disable-next-line
 };
 </script>
 

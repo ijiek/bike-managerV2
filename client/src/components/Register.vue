@@ -128,6 +128,8 @@ export default {
         // eslint-disable-next-line
         colors: ["#E0F2F1", "#80CBC4", "#26A69A", "#00796B", "#009688"],
         interval: 3000,
+        email: "abc",
+        password: "123",
         transition: {
           // eslint-disable-next-line
           duration: 6000,

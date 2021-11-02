@@ -1,7 +1,13 @@
+/* eslint-disable */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
+import About from '../views/About.vue'
+import Home from '../pages/Home.vue'
+import Race from '../pages/Race.vue'
+import Bikers from '../pages/Bikers.vue'
+import Test from '../pages/Test.vue'
 
 Vue.use(VueRouter)
 
@@ -32,27 +38,31 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: About
   },
   {
     path: '/home',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/Home.vue')
+    // component: () => import(/* webpackChunkName: "about" */ '../pages/Home.vue')
+    component: Home
   },
   {
     path: '/biker',
     name: 'Bikers',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/Bikers.vue')
+    // component: () => import(/* webpackChunkName: "about" */ '../pages/Bikers.vue')
+    component: Bikers
   },
   {
     path: '/race',
     name: 'Race',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/Race.vue')
+    // component: () => import(/* webpackChunkName: "about" */ '../pages/Race.vue')
+    component: Race
   },
   {
     path: '/test',
     name: 'Test',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/test.vue')
+    component: Test
   }
 ]
 
