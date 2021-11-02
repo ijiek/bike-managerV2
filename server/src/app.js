@@ -26,9 +26,9 @@ app.use(cors()) // allows client acess, when you want a server to be hosted on a
 
 
 // testing for connection
-app.get('/status', (req, res) => { // sends json object
+app.post('/register', (req, res) => { // sends json object
     res.send({
-        message: 'helloweoufw'
+        message: 'Hello ${req.body.email}! itworks'
     })
 })
 
