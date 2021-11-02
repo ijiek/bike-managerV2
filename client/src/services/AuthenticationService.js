@@ -1,4 +1,6 @@
 // for the login page
+/* eslint-disable */
+
 import Api from '@/services/Api'
 
 export default {

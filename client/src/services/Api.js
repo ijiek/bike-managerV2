@@ -1,4 +1,6 @@
 // setting up connection
+/* eslint-disable */
+
 import axios from 'axios'
 
 export default () => {

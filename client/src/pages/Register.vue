@@ -124,6 +124,9 @@ import SignUpDialog from "@/components/SignUpDialog.vue";
 export default {
   data() {
     return {
+      user: "abc", // email adress
+      password: "123",
+      // vue breathing colours
       step: 1,
       sample: {
         colors: ["#E0F2F1", "#80CBC4", "#26A69A", "#00796B", "#009688"],
@@ -146,6 +149,16 @@ export default {
         return this.$emit("input", value);
       },
     },
+  },
+  watch: {
+    email(value) {
+      console.log("user has changed", value);
+    },
+  },
+  mounted() {
+    setTimeout(() => {
+      this.user = "hello world";
+    }, 2000);
   },
   props: {
     source: String,

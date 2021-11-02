@@ -19,6 +19,7 @@
                             label="email"
                             name="email"
                             type="email"
+                            v-model="user"
                             color="teal darken-1"
                           />
                           <v-text-field
@@ -26,6 +27,7 @@
                             label="Password"
                             name="password"
                             type="password"
+                            v-model="user"
                             color="teal darken-1"
                           />
                         </v-form>
@@ -33,7 +35,7 @@
                       <v-card-actions>
                         <div class="text-center">
                           <v-btn
-                            to="/home"
+                            @click="register"
                             class="center"
                             rounded
                             color="teal darken-1"
@@ -116,32 +118,61 @@
 </template>
 
 <script>
+/* eslint-disable */
+import SignUpDialog from "@/components/SignUpDialog.vue";
+import AuthenticationService from "@/services/AuthenticationService.js";
+
 export default {
-  // eslint-disable-next-line
-  name: "HelloWorld",
-  // eslint-disable-next-line
   data() {
-    // eslint-disable-next-line
     return {
+      user: "", // email adress
+      password: "",
+      // vue breathing colours
       step: 1,
       sample: {
-        // eslint-disable-next-line
         colors: ["#E0F2F1", "#80CBC4", "#26A69A", "#00796B", "#009688"],
         interval: 3000,
-        email: "abc",
-        password: "123",
         transition: {
-          // eslint-disable-next-line
           duration: 6000,
-          // eslint-disable-next-line
         },
-        // eslint-disable-next-line
       },
-      // eslint-disable-next-line
     };
-    // eslint-disable-next-line
   },
-  // eslint-disable-next-line
+  components: {
+    SignUpDialog,
+  },
+  computer: {
+    showDialog: {
+      get() {
+        return this.value;
+      },
+      set(value) {
+        return this.$emit("input", value);
+      },
+    },
+  },
+  // watch: {
+  //   email(value) {
+  //     console.log("user has changed", value);
+  //   },
+  // },
+  // mounted() {
+  //   setTimeout(() => {
+  //     this.user = "hello world";
+  //   }, 2000);
+  // },
+  methods: {
+    async register() {
+      const response = await AuthenticationService.register({
+        users: this.user,
+        password: this.password,
+      });
+      console.log(response.data);
+    },
+  },
+  props: {
+    source: String,
+  },
 };
 </script>
 
