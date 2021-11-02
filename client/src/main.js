@@ -7,6 +7,7 @@ import router from './router'
 import vuetify from './plugins/vuetify'
 import BreathingColors from 'vue-breathing-colors'
 
+
 Vue.use(BreathingColors)
 Vue.config.productionTip = false
 

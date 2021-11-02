@@ -19,6 +19,7 @@
                             label="email"
                             name="email"
                             type="email"
+                            to="/home"
                             v-model="user"
                             color="teal darken-1"
                           />
@@ -36,6 +37,7 @@
                         <div class="text-center">
                           <v-btn
                             @click="register"
+                            to="/home"
                             class="center"
                             rounded
                             color="teal darken-1"

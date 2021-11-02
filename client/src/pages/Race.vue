@@ -55,7 +55,6 @@ export default {
     AppFooter,
     AddRaceDialog,
   },
-
   data() {
     return {
       AddRaceDialog: false,

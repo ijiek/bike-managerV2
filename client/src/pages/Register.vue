@@ -19,7 +19,7 @@
                             label="user"
                             name="user"
                             type="user"
-                            v-model="user"
+                            v-model="email"
                             color="teal darken-1"
                           />
                           <v-text-field
@@ -124,7 +124,7 @@ import SignUpDialog from "@/components/SignUpDialog.vue";
 export default {
   data() {
     return {
-      user: "abc", // email adress
+      email: "abc", // email adress
       password: "123",
       // vue breathing colours
       step: 1,
@@ -157,7 +157,7 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.user = "hello world";
+      this.email = "hello world";
     }, 2000);
   },
   props: {

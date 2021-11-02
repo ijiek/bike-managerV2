@@ -41,24 +41,28 @@
 </template>
 
 <script>
+/* eslint-disable */
+// import { icon } from "@iconify/vue2";
 // import NavigationDrawer from '@/components/NavigationDrawer.vue'
 export default {
-  // eslint-disable-next-line
   name: "navbar",
   // components: {
-  //   NavigationDrawer
+  //   Icon,
+  //   // NavigationDrawer
   // },
-  // eslint-disable-next-line
+
   data() {
     return {
+      // // Assign icon data to icons.chart
+      // icons: {
+      //   chart: areaChartOutlined,
+      // },
       drawer: false,
-      group: null, // eslint-disable-next-line
+      group: null,
       items: [
-        // eslint-disable-next-line
         {
-          // eslint-disable-next-line
-          name: "Home", // eslint-disable-next-line
-          path: "/home", // eslint-disable-next-line
+          name: "Home",
+          path: "/home",
           icon: "home",
         },
         // {
@@ -67,33 +71,29 @@ export default {
         //   icon: "motorbike",
         // },
         {
-          // eslint-disable-next-line
-          name: "Race", // eslint-disable-next-line
-          path: "/race", // eslint-disable-next-line
+          name: "Race",
+          path: "/race",
           icon: "map-marker-radius",
         },
         {
-          // eslint-disable-next-line
-          name: "Bikers", // eslint-disable-next-line
-          path: "/biker", // eslint-disable-next-line
+          name: "Bikers",
+          path: "/biker",
           icon: "bike",
         },
         // change this to logout later
         {
-          // eslint-disable-next-line
-          name: "LogIn", // eslint-disable-next-line
-          path: "/", // eslint-disable-next-line
+          name: "LogIn",
+          path: "/",
           icon: "account-circle",
         },
         {
-          // eslint-disable-next-line
-          name: "Test", // eslint-disable-next-line
-          path: "/test", // eslint-disable-next-line
-          icon: "account-circle", // eslint-disable-next-line
-        }, // eslint-disable-next-line
-      ], // eslint-disable-next-line
-    }; // eslint-disable-next-line
-  }, // eslint-disable-next-line
+          name: "Test",
+          path: "/test",
+          icon: "account-circle",
+        },
+      ],
+    };
+  },
 };
 </script>
 
