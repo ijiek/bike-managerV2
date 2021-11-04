@@ -11,7 +11,7 @@
     <v-card>
       <v-toolbar>
         <v-btn @click="showDialog = false" icon>
-          <v-icon>mdi:close</v-icon>
+          <v-icon>mdi-close</v-icon>
         </v-btn>
         <v-toolbar-title> Add New Racer </v-toolbar-title>
         <v-spacer />

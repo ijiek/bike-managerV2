@@ -71,61 +71,47 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
-  // eslint-disable-next-line
   name: "AddRaceDialog",
   props: {
     value: {
       type: Boolean,
-      // eslint-disable-next-line
+
       required: true,
-      // eslint-disable-next-line
     },
   },
-  // eslint-disable-next-line
+
   data() {
     return {
       numberRule: (v) => {
-        // eslint-disable-next-line
         if (!v.trim()) return true;
-        // eslint-disable-next-line
+
         if (!isNaN(parseFloat(v)) && v >= 0 && v <= 100) return true;
-        // eslint-disable-next-line
+
         return "Number has to be between 0 and 100";
-        // eslint-disable-next-line
       },
-      // eslint-disable-next-line
     };
   },
   methods: {
-    // eslint-disable-next-line
     cancel() {
-      // eslint-disable-next-line
       this.resolve(false);
-      // eslint-disable-next-line
+
       this.showDialog = false;
-      // eslint-disable-next-line
     },
   },
   computed: {
     // gets value of dialog true of false
     showDialog: {
-      // eslint-disable-next-line
       get() {
-        // eslint-disable-next-line
         return this.value;
       },
-      // eslint-disable-next-line
+
       set(value) {
-        // eslint-disable-next-line
         return this.$emit("input", value);
-        // eslint-disable-next-line
       },
-      // eslint-disable-next-line
     },
-    // eslint-disable-next-line
   },
-  // eslint-disable-next-line
 };
 </script>
 

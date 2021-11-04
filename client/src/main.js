@@ -5,10 +5,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import vuetify from './plugins/vuetify'
+import '@mdi/font/css/materialdesignicons.css'
 import BreathingColors from 'vue-breathing-colors'
 
+// Vue.use(vuetify, BreathingColors, {
+//   iconfont: 'mdi'
+// })
+Vue.use(BreathingColors, {
+  iconfont: 'mdi'
+});
 
-Vue.use(BreathingColors)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

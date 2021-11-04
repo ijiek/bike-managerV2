@@ -12,7 +12,7 @@
       <v-card>
         <v-toolbar>
           <v-btn @click="showDialog = false" icon>
-            <v-icon>mdi:close</v-icon>
+            <v-icon>mdi-close</v-icon>
           </v-btn>
           <v-toolbar-title> Add New Racer </v-toolbar-title>
           <v-spacer />
@@ -31,7 +31,7 @@
                 <v-file-input
                   label="File input"
                   filled
-                  prepend-icon="mdi:camera"
+                  prepend-icon="mdi-camera"
                 ></v-file-input>
               </v-col>
             </v-col>
