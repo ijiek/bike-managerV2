@@ -1,16 +1,3 @@
-// // module.exports = {
-// //     // testing for connection
-// //     register (req, res) { // sends json object
-// //         res.send({
-// //             message: 'Hello ${req.body.email}! itworks'
-// //         })
-// //     }
-// // } 
-
-// const {User} = require('../models')
-// const jwt = require('jsonwebtoken')
-// const config = require('../config/config')
-
 // function jwtSignUser (user) {
 //   const ONE_WEEK = 60 * 60 * 24 * 7
 //   return jwt.sign(user, config.authentication.jwtSecret, {
@@ -18,29 +5,24 @@
 //   })
 // }
 
-// module.exports = {
-//   async register (req, res) {
-//     try {
-//       const user = await User.create(req.body)
-//       const userJson = user.toJSON()
-//       res.send({
-//         user: userJson,
-//         token: jwtSignUser(userJson)
-//       })
-//     } catch (err) {
-//       res.status(400).send({
-//         error: 'This email/user is already in use.'
-//       })
-//     }
-//   },
-//   async login (req, res) {
-//     try {
-//       const {email, password} = req.body
-//       const user = await User.findOne({
-//         where: {
-//           email: email
+//         try {
+//             const userJson = user.toJSON()
+//             res.send({
+//                 user: userJson,
+//                 token: jwtSignUser(userJson)
+//             })
+//         } catch (err) {
+//             
 //         }
-//       })
+//     },
+//     async login(req, res) {
+//         try {
+//             const { email, password } = req.body
+//             const user = await User.findOne({
+//                 where: {
+//                     email: email
+//                 }
+//             })
 
 //       if (!user) {
 //         return res.status(403).send({
@@ -67,3 +49,23 @@
 //     }
 //   }
 // }
+
+const { User } = require('../models')
+// const jwt = require('jsonwebtoken')
+// const config = require('../config/config')
+
+module.exports = {
+    async register(req, res) {
+        try {
+            const user = await User.create(req.body)
+            // when succesful
+            res.send(user.JSON())
+        } catch (error) {
+            res.status(400).send({
+                error: 'This is already in use.'
+            })
+        }
+
+    }
+
+}

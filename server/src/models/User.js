@@ -45,3 +45,13 @@
 // }
 
 
+module.exports = (sequelize, DataTypes) =>
+    sequelize.define('User', {
+        email: {
+            type: DataTypes.STRING,
+            unique: true // data returned must be unique
+        },
+        password: DataTypes.STRING
+    })
+
+

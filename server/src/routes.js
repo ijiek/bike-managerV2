@@ -1,8 +1,11 @@
+// controllers used for declaring endpoints
+
+const AuthenticationController = require('./controllers/AuthenticationController')
+
+const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
+
 module.exports = (app) => {
-    // testing for connection
-    app.post('/register', (req, res) => { // sends json object
-        res.send({
-            message: 'Hello ${req.body.email}! itworks'
-        })
-    })
+    app.post('/register',
+        AuthenticationControllerPolicy.register,
+        AuthenticationController.register)
 }

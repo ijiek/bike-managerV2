@@ -64,6 +64,18 @@
 // })
 // module.exports = conn
 
+// track name of database
 module.exports = {
-  port: 8081
+  port: process.env.PORT || 8081,
+  db: {
+    database: process.env.DB_NAME || 'track',
+    user: process.env.DB_USER || 'track',
+    password: process.env.DB_PASS || 'track',
+    options: {
+      dialect: process.env.DIALECT || 'sqlite', // type of database connecting
+      host: process.env.HOST || 'localhost',
+      // storage: path.resolve(__dirname, '../../track.sqlite')
+      storage: './track.sqlite'
+    }
+  }
 }
