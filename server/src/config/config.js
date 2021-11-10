@@ -32,31 +32,24 @@
 // // Listen on enviroment port or 5000
 // app.listen(port, () => console.log(`Listening on port ${port}`)) //passes port variable
 
+// const path = require('path')
 
-
-
-module.exports = {
-    port: 8081
-}
-
-const path = require('path')
-
-module.exports = {
-  port: process.env.PORT || 8081,
-  db: {
-    database: process.env.DB_NAME || 'bikerace_manager',
-    user: process.env.DB_USER || 'bikerace_manager',
-    password: process.env.DB_PASS || 'bikerace_manager',
-    options: {
-      dialect: process.env.DIALECT || 'sqlite',
-      host: process.env.HOST || 'localhost',
-      storage: path.resolve(__dirname, '../../bikerace_manager.sqlite')
-    }
-  },
-  authentication: {
-    jwtSecret: process.env.JWT_SECRET || 'secret'
-  }
-}
+// module.exports = {
+//   port: process.env.PORT || 8081,
+//   db: {
+//     database: process.env.DB_NAME || 'bikerace_manager',
+//     user: process.env.DB_USER || 'bikerace_manager',
+//     password: process.env.DB_PASS || 'bikerace_manager',
+//     options: {
+//       dialect: process.env.DIALECT || 'sqlite',
+//       host: process.env.HOST || 'localhost',
+//       storage: path.resolve(__dirname, '../../bikerace_manager.sqlite')
+//     }
+//   },
+//   authentication: {
+//     jwtSecret: process.env.JWT_SECRET || 'secret'
+//   }
+// }
 
 // var mysql = require('mysql')
 // var conn = mysql.createConnection({
@@ -70,3 +63,7 @@ module.exports = {
 //   console.log('Database is connected successfully !')
 // })
 // module.exports = conn
+
+module.exports = {
+  port: 8081
+}

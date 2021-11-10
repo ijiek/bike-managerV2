@@ -1,6 +1,9 @@
 // const Promise = require('bluebird')
 // const bcrypt = Promise.promisifyAll(require('bcrypt-nodejs'))
 
+// const { DataTypes } = require("sequelize/types");
+// const { sequelize } = require(".");
+
 // function hashPassword (user, options) {
 //   const SALT_FACTOR = 8
 
@@ -40,3 +43,5 @@
 
 //   return User
 // }
+
+
